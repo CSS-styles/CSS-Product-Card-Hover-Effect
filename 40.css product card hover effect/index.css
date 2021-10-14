@@ -1,0 +1,108 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100%;
+	background-color: #262626FF;
+}
+.card{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	position: relative;
+	height: 300px;
+	width: 500px;
+	font-size: 20px;
+	font-weight: bold;
+	font-family: sans-serif;
+	color: white;
+	box-shadow: 1px 1px 60px black;
+	border-radius: 10px;
+	cursor: pointer;
+	overflow: hidden;
+}
+img{
+	position: relative;
+	transition: 1s;
+	height: 250px;
+	width: 250px;
+}
+h1{
+	position: absolute;
+	top: 5%;
+	left: 5%;
+}
+.content{
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	bottom: 10%;
+	text-align: center;
+}
+.sizes{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.sizes span{
+	display: block;
+	background-color: white;
+	color: black;
+	padding: 3px;
+	margin: 10px;
+}
+.content h2{
+	position: relative;
+	margin-top: 30px;
+}
+a{
+	display: block;
+	position: absolute;
+	bottom: 3%;
+	right: 3%;
+	text-decoration: none;
+	padding: 5px 10px;
+	color: white;
+	border: 2px solid white;
+}
+.card::after{
+	content: '';
+	display: block;
+	position: absolute;
+	bottom: 80%;
+	left: 80%;
+	height: 200px;
+	width: 200px;
+	background-color: #1D4DE1FF;
+	transition: 0.5s;
+	filter: blur(5px);
+	border-radius: 50%;
+	box-shadow: 1px 1px 60px royalblue;
+	z-index: -1;
+}
+div:hover::after{
+	transition: 1s;
+	bottom: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	border-radius: 0;
+}
+img:hover{
+	transform: translateY(-20px);
+}
+.sizes span:hover{
+	transition: 0.5s;
+	background-color: transparent;
+	color: white;
+}
+a:hover{
+	background-color: white;
+	color: black;
+}
